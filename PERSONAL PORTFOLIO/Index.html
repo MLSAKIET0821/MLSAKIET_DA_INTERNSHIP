@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <fieldset>
+        <legend><i><b>PORTFOLIO</b></i></legend>
+        <div class="div1" id="div1"></div>
+        <div class="profile-img">
+            <img src="photo_2024-10-29_00-26-42.jpg" alt="Profile Photo">
+        </div>
+        <h1><u>ABOUT MYSELF</u></h1> 
+        <p>NAME--SHREYANSH TIWARI</p>
+        <p>AGE--18 YRS</p>
+        <p>CITY_I_BELONG_TO--BALLIA</p>
+        <p>SCHOOL--CITY CONVENT SCHOOL</p>
+        <p>COLLEGE--KIET GROUP OF INSTITUTIONS,GHAZIABAD</p>
+        <p>COURSE--B.Tech</p>
+        <p>YEAR--2nd</p>
+        <p>BRANCH--CSE</p>
+        <p>HOBBIES--Includes:
+            <ol>
+                <li>PLAYING CRICKET</li>
+                <li>READING SELF INSPIRATIONAL POETRIES
+                    <ul>
+                        <li>fav line-"Toote huye sapmo ki kaun sune siski"</li>
+                    </ul>
+                </li>
+            </ol>
+        </p>
+        <p>TECH_STACK_I_LEARNING--Includes:
+            <ul>
+                <li>C++ Programming</li>
+                <li>Web Development</li>
+                <li>Data Structures & Algorithms</li>
+            </ul>
+        </p>
+        <h3><u>My Goal</u></h3>
+        <ol>
+            <li>Grabing One Of The Highest Placement</li>
+            <li>Develop Good Soft Skill & Personality</li>
+            <li>Have To Done 800 LeetCode Questions In C++</li>
+            <li>Become Web Developer And Contribute To Open Source</li>
+        </ol>
+        <p>it's a never ending list!!</p>
+
+        <p><u>CONNECT WITH ME THROUGH:</u></p>
+        <p>
+            <a target="_blank" href="https://www.linkedin.com/in/shreyansh-tiwari-08a5792a1">
+                <i class="fab fa-linkedin"></i> My Linkedin
+            </a>
+        </p>
+        <p>
+            <a target="_blank" href="https://www.instagram.com/_shreyanshtiwari24/?igsh=ZDE1MWVjZGVmZQ%3D%3D">
+                <i class="fab fa-instagram"></i> My Instagram
+            </a>
+        </p>
+        <p><u>SEE MY CODING UPDATES:</u></p>
+        <p>
+            <a target="_blank" href="https://www.hackerrank.com/profile/G_CSE_60">
+                <i class="fab fa-hackerrank"></i> My Hackerrank ID
+            </a>
+        </p>
+        <p>
+            <a target="_blank" href="https://leetcode.com/profile/">
+                <i class="fab fa-leetcode"></i> My Leetcode ID
+            </a>
+        </p>
+        <p>
+            <a target="_blank" href="https://github.com/ShreyanshTiwari24">
+                <i class="fab fa-github"></i> My GitHub
+            </a>
+        </p>
+
+        <div class="review-section">
+            <h3>#Don't Forget to Rate my First HTML Project</h3>
+            <label for="ss"><b>Reviewer Name:</b></label>
+            <input type="text" id="ss" name="ss" placeholder="Enter your name">
+
+            <label for="range"><b>Rating (1-10):</b></label>
+            <input type="range" id="range" name="range" min="1" max="10" value="5">
+            <p><span id="range-value">5</span>/10</p>
+
+            <b>Review:</b>
+            <select name="em" id="em">
+                <option value="neutral">😐</option>
+                <option value="happy">🤩</option>
+                <option value="angry">🤬</option>
+                <option value="disgusted">🤮</option>
+            </select>
+        </div>
+
+        <p>---------------THANK_YOU----------------</p>  
+    </fieldset>
+
+    <script>
+        // JavaScript to update the range value display
+        const range = document.getElementById("range");
+        const rangeValue = document.getElementById("range-value");
+        
+        range.addEventListener("input", function() {
+            rangeValue.textContent = range.value;
+        });
+    </script>
+</body>
+</html>

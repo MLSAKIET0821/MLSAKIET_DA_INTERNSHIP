@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <style type="text/css">
+    table {
+      margin: auto;
+      background: #89c0a2;
+    }
+    table button {
+      width: 50px;
+      background: rgb(229, 162, 229);
+      border-radius: 50%;
+      height: 60px;
+      border: none;
+    }
+    table tr td {
+      padding: 10px;
+    }
+    table input {
+      width: 95%;
+      border-radius: 10px;
+      height: 40px;
+      text-align: right;
+      padding-right: 10px;
+    }
+  </style>
+  <script type="text/javascript">
+    function keepValues(s) {
+      let text_inp = document.getElementById('text_inp');
+      let priorvalue = text_inp.value;
+      let q = priorvalue.length;
+      let endChar = priorvalue[q - 1];
+
+      let perSign = ["+", "-", "*", "/", "."];
+      if (perSign.includes(s)) {
+        if (perSign.includes(endChar)) {
+          let omitEnd = priorvalue.slice(0, -1);
+          text_inp.value = omitEnd + s;
+        } else {
+          text_inp.value = priorvalue + s;
+        }
+      } else {
+        text_inp.value = priorvalue + s;
+      }
+    }
+
+    function calData() {
+      let text_inp = document.getElementById('text_inp');
+      try {
+        let priorvalue = eval(text_inp.value);
+        text_inp.value = priorvalue;
+      } catch (error) {
+        text_inp.value = "Error";
+      }
+    }
+
+    function clearInput() {
+      document.getElementById('text_inp').value = '';
+    }
+  </script>
+</head>
+<body>
+  <table border="1">
+    <tr>
+      <td><button onclick="clearInput()">C</button></td>
+      <td colspan="3"><input type="text" id="text_inp" /></td>
+    </tr>
+    <tr>
+      <td><button onclick="keepValues('+')">+</button></td>
+      <td><button onclick="keepValues('1')">1</button></td>
+      <td><button onclick="keepValues('2')">2</button></td>
+      <td><button onclick="keepValues('3')">3</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="keepValues('-')">-</button></td>
+      <td><button onclick="keepValues('4')">4</button></td>
+      <td><button onclick="keepValues('5')">5</button></td>
+      <td><button onclick="keepValues('6')">6</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="keepValues('*')">*</button></td>
+      <td><button onclick="keepValues('7')">7</button></td>
+      <td><button onclick="keepValues('8')">8</button></td>
+      <td><button onclick="keepValues('9')">9</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="keepValues('/')">/</button></td>
+      <td><button onclick="keepValues('.')">.</button></td>
+      <td><button onclick="keepValues('0')">0</button></td>
+      <td><button onclick="calData()">=</button></td>
+    </tr>
+  </table>
+</body>
+</html>
